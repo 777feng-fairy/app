@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+#
+spring:
+  mvc:
+    static-path-pattern: /**
+    servlet:
+      load-on-startup: 1
+      path: /
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: oK8oDJUtE0TN5e8/JIfpksF0qir3iy+al4yIFMVyxK+PxBXfv0VpGytDgl73+xZ9u3NQd4RnCAcXVgJeCSpDwg==
+    url: jdbc:mysql://localhost:3306/shopmanage?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filter:
+        config:
+          enabled: true
+      connection-properties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKPRjuJkBTyB8dbSbKFXSDrLs9m7cBGnhMXJy8uxRY3xk20u7Jp/lcfT96vflEUjOSsE59mnJaQ2Md83cTVx0gECAwEAAQ==
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: Asia/Shanghai
+
+
